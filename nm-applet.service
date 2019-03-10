@@ -1,0 +1,7 @@
+[Unit]
+Description=Applet for managing network connections
+Documentation=man:nm-applet(1)
+
+[Service]
+ExecStart=/usr/bin/nm-applet
+Restart=always

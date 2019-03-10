@@ -1,0 +1,8 @@
+[Unit]
+Description=PulseAudio controller for the system tray
+Documentation=man:pasystray(1)
+
+[Service]
+ExecStart=/usr/bin/pasystray
+Restart=always
+

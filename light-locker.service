@@ -1,0 +1,7 @@
+[Unit]
+Description=Screen locker that uses Light Display Manager
+Documentation=man:light-locker(1) man:light-locker-command(1)
+
+[Service]
+ExecStart=/usr/bin/light-locker
+Restart=always

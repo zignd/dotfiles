@@ -1,0 +1,22 @@
+# Allows some sort of access to the X server from any host? Not really sure
+xhost +
+
+# Sets my laptop's keyboard layout
+setxkbmap -model thinkpad -layout br -variant thinkpad &
+
+# Loads a few keyboard shortcuts from ~/.xbindkeysrc
+xbindkeys &
+
+# Starts the screen locker service
+sudo systemctl start avahi-daemon.service
+systemctl --user import-environment
+systemctl --user start dunst.service
+systemctl --user start light-locker.service
+systemctl --user start pasystray.service
+systemctl --user start nm-applet.service
+
+# Sets the wallpaper, gotta improve this
+feh --bg-fill ~/Pictures/cyberpunk-wallpapers-30824-2291211.jpg &
+
+# Starts my custom polybar
+#polybar zigbar &
